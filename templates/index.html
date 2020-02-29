@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titanic prediction</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<h1>WELCOME TO TITANIC MACHINE LEARNING MODEL</h1>
+<h3>Get your predictions</h3>
+<P>Please Enter your Passenger Values</P>
+<form action="{% url 'result' %}" >
+    {% csrf_token %}
+    <p>Pclass <input type="text" name="pclass"></p>
+    <p>Sex <input type="text" name="sex"></p>
+    <p>Age <input type="text" name="age"></p>
+    <p>Sibsp <input type="text" name="sibsp"></p>
+    <p>Parch <input type="text" name="parch"></p>
+    <p>Fare <input type="text" name="fare"></p>
+    <p>Embarked <input type="text" name="embarked"></p>
+    <p>Title <input type="text" name="title"></p>
+
+    <input type="submit">
+</form>
+<br>
+</body>
+</html>
